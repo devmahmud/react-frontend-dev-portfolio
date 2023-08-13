@@ -7,9 +7,14 @@ import {
 } from "react-vertical-timeline-component";
 import ProjectDialog from "./components/dialog/ProjectDialog";
 import { useBoolean } from "./hooks/useBoolean";
+import { ThemeContext, ThemeContextInterface } from "./contexts";
+import { useContext } from "react";
 
 function App() {
   const [isOpen, setIsOpen] = useBoolean();
+  const { darkTheme, toggleTheme } = useContext(
+    ThemeContext,
+  ) as ThemeContextInterface;
 
   return (
     <main>
@@ -74,8 +79,8 @@ function App() {
           />
 
           <Switch
-            // checked={this.state.checked}
-            // onChange={this.onThemeSwitchChange}
+            checked={darkTheme}
+            onChange={toggleTheme}
             offColor="#baaa80"
             onColor="#353535"
             className="react-switch mx-auto"
