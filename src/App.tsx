@@ -5,8 +5,12 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import ProjectDialog from "./components/dialog/ProjectDialog";
+import { useBoolean } from "./hooks/useBoolean";
 
 function App() {
+  const [isOpen, setIsOpen] = useBoolean();
+
   return (
     <main>
       <a
@@ -35,7 +39,7 @@ function App() {
           />
         </svg>
       </a>
-      <header className="h-[650px] w-[100%] bg-yellow">
+      <header className="h-[650px] w-[100%] bg-yellow dark:bg-[#494949]">
         <div className="flex h-full flex-col items-center justify-center gap-5">
           <div>
             <Icon
@@ -48,7 +52,9 @@ function App() {
             />
           </div>
 
-          <h1 className="text-4xl font-bold text-gray-dark">Davina Griss</h1>
+          <h1 className="text-4xl font-bold text-gray-dark dark:text-white">
+            Davina Griss
+          </h1>
 
           <TypeAnimation
             sequence={[
@@ -63,7 +69,7 @@ function App() {
             ]}
             wrapper="span"
             speed={50}
-            className="text-regular text-2xl text-gray-dark"
+            className="text-regular text-2xl text-gray-dark dark:text-white"
             repeat={Infinity}
           />
 
@@ -91,7 +97,7 @@ function App() {
         </div>
       </header>
 
-      <div className="flex justify-center gap-5 bg-yellow pb-2.5 pt-20">
+      <div className="flex justify-center gap-5 bg-yellow pb-2.5 pt-20 dark:bg-[#494949]">
         <Icon
           className="h-full cursor-pointer text-[50px] text-gray-dark brightness-50"
           icon="twemoji-flag-for-flag-united-kingdom"
@@ -101,7 +107,7 @@ function App() {
           icon="twemoji-flag-for-flag-poland"
         />
       </div>
-      <section className="py-5 md:py-10">
+      <section className="py-5 dark:bg-[#7f7f7f] md:py-10">
         <h2 className="text-center text-xl font-medium uppercase tracking-widest ">
           About Me
         </h2>
@@ -153,10 +159,12 @@ function App() {
                 }}
               >
                 <br />
-                <span className="text-xl font-medium">Hi :) </span>
+                <span className="text-xl font-medium dark:text-white">
+                  Hi :){" "}
+                </span>
                 <br />
                 <br />
-                <p className="text-sm font-medium">
+                <p className="text-sm font-medium dark:text-white">
                   👋 I'm Davina Griss. Fictional person for preview purposes :)
                   I'm working with newest front-end frameworks like Angular,
                   React and Vue. What you are seeing now is portfolio template
@@ -171,13 +179,16 @@ function App() {
       </section>
 
       {/* Portfolio */}
-      <section className="bg-yellow px-3 py-5 md:px-0 md:py-10">
+      <section className="bg-yellow px-3 py-5 dark:bg-[#494949] md:px-0 md:py-10">
         <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-black">
           Projects
         </h2>
 
         <div className="flex flex-wrap justify-center gap-10">
-          <div className="mb-[30px] inline-block bg-white p-3 text-center shadow-card transition duration-[0.2] ease-linear hover:scale-[1.01] hover:shadow-card-hover">
+          <div
+            className="mb-[30px] inline-block bg-white p-3 text-center shadow-card transition duration-[0.2] ease-linear hover:scale-[1.01] hover:shadow-card-hover dark:bg-[#6d6d6d]"
+            onClick={setIsOpen.on}
+          >
             <img
               className="relative max-h-[230px]"
               src="/images/portfolio/animal-shelter/p1.jpg"
@@ -186,7 +197,7 @@ function App() {
             <span className="mt-3 rounded-b-lg bg-[#696969] px-4 pb-1 pt-2 text-center text-lg text-white">
               2020
             </span>
-            <p className="font-xl mt-2 font-bold uppercase tracking-wide">
+            <p className="font-xl mt-2 font-bold uppercase tracking-wide dark:text-white">
               Animal Shelter
             </p>
           </div>
@@ -234,43 +245,38 @@ function App() {
       </section>
 
       {/* Experience */}
-      <section className="bg-yellow px-3 py-10 pb-20 md:px-0">
+      <section className="bg-yellow px-3 py-10 pb-20 dark:bg-[#494949] md:px-0">
         <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-white">
           Experience
         </h2>
 
         <VerticalTimeline>
           <VerticalTimelineElement
-            iconStyle={{
-              background: "#AE944F",
-              color: "#fff",
-              textAlign: "center",
-            }}
+            iconClassName="bg-[#AE944F] text-white dark:bg-[#919191]"
             icon={<Icon icon="eos-icons:hourglass" />}
           />
           <VerticalTimelineElement
             date={"2020 - 2021"}
-            iconStyle={{
-              background: "#AE944F",
-              color: "#fff",
-              textAlign: "center",
-            }}
+            dateClassName="dark:text-white"
+            iconClassName="bg-[#AE944F] text-white dark:bg-[#919191]"
             icon={<Icon icon="mdi:react" />}
+            className="dark:brightness-80 dark:filter"
+            // contentStyle={{ filter: "brightness(80%)" }}
           >
-            <span className="rounded-xl bg-yellow px-[5px] py-[2px] text-sm">
+            <span className="rounded-xl bg-yellow px-[5px] py-[2px] text-sm dark:bg-[#919191] dark:text-white">
               React
             </span>
 
             <h3 className="text-lg font-bold">work title</h3>
             <h4 className="text-md font-bold">company</h4>
             <div className="mt-2 flex gap-2">
-              <span className="rounded-xl bg-[#f9f5e9] px-[5px] py-[2px] text-sm">
+              <span className="rounded-xl bg-[#f9f5e9] px-[5px] py-[2px] text-sm dark:bg-[#919191] dark:text-white">
                 React
               </span>
-              <span className="rounded-xl bg-[#f9f5e9] px-[5px] py-[2px] text-sm">
+              <span className="rounded-xl bg-[#f9f5e9] px-[5px] py-[2px] text-sm dark:bg-[#919191] dark:text-white">
                 React
               </span>
-              <span className="rounded-xl bg-[#f9f5e9] px-[5px] py-[2px] text-sm">
+              <span className="rounded-xl bg-[#f9f5e9] px-[5px] py-[2px] text-sm dark:bg-[#919191] dark:text-white">
                 React
               </span>
             </div>
@@ -290,6 +296,8 @@ function App() {
         </div>
         <p className="py-2 text-xs">Copyright &copy; Davina Griss</p>
       </footer>
+
+      <ProjectDialog open={isOpen} onClose={setIsOpen.off} />
     </main>
   );
 }
