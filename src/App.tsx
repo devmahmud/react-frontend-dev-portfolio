@@ -102,8 +102,8 @@ function App() {
           About Me
         </h2>
 
-        <div className="flex items-center justify-center gap-10 px-10">
-          <div className="w-1/3 text-center">
+        <div className="flex flex-col items-center justify-center gap-10 px-10 pb-10 md:flex-row md:pb-0">
+          <div className="text-center md:w-1/3">
             <div className="mb-[30px] mt-[55px] inline-block p-4 pb-10 shadow-card ">
               <img
                 src="/images/myProfile.jpg"
@@ -133,7 +133,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="w-2/3">
+          <div className="md:w-2/3">
             <div className="rounded-sm border border-[rgba(0,0,0,.125)]">
               <div className="flex items-center gap-3 border-b border-[rgba(0,0,0,.125)] bg-[rgba(0,0,0,0.03)] px-3 py-2">
                 <Icon icon="emojione:red-circle" width={10} />
@@ -172,7 +172,7 @@ function App() {
           Projects
         </h2>
 
-        <div className="flex justify-center gap-10">
+        <div className="flex flex-wrap justify-center gap-10">
           <div className="mb-[30px] inline-block bg-white p-3 text-center shadow-card transition duration-[0.2] ease-linear hover:scale-[1.01] hover:shadow-card-hover">
             <img
               className="relative max-h-[230px]"
@@ -211,8 +211,21 @@ function App() {
           Skills
         </h2>
 
-        <ul>
-          <li></li>
+        <ul className="flex flex-wrap justify-center  gap-4">
+          {skills.icons.map((skill) => (
+            <li
+              key={skill.name}
+              className="flex h-[84px] w-[100px] flex-col items-center justify-center rounded-[8px] bg-[#2A2929] p-[5x] text-white"
+            >
+              <Icon
+                icon={skill.class}
+                className="mx-auto"
+                width="39.6px"
+                height="39.5px"
+              />
+              <p className="mt-3 text-center text-xs">{skill.name}</p>
+            </li>
+          ))}
         </ul>
       </section>
     </main>
@@ -220,3 +233,53 @@ function App() {
 }
 
 export default App;
+
+const skills = {
+  icons: [
+    {
+      name: "HTML 5",
+      class: "ri:html5-fill",
+      level: "95",
+    },
+    {
+      name: "CSS 3",
+      class: "teenyicons:css3-solid",
+      level: "95",
+    },
+    {
+      name: "Angular",
+      class: "mdi:angular",
+      level: "80",
+    },
+    {
+      name: "TypeScript",
+      class: "teenyicons:typescript-solid",
+      level: "90",
+    },
+    {
+      name: "JavaScript",
+      class: "teenyicons:javascript-solid",
+      level: "70",
+    },
+    {
+      name: "Sass",
+      class: "la:sass",
+      level: "75",
+    },
+    {
+      name: "Bootstrap",
+      class: "ri:bootstrap-fill",
+      level: "85",
+    },
+    {
+      name: "C#",
+      class: "devicon-plain:csharp",
+      level: "65",
+    },
+    {
+      name: "MySql",
+      class: "fontisto:mysql",
+      level: "60",
+    },
+  ],
+};
