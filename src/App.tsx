@@ -1,6 +1,10 @@
 import Switch from "react-switch";
 import { Icon } from "@iconify/react";
 import { TypeAnimation } from "react-type-animation";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 
 function App() {
   return (
@@ -97,7 +101,7 @@ function App() {
           icon="twemoji-flag-for-flag-poland"
         />
       </div>
-      <section className="pt-5 md:pt-10">
+      <section className="py-5 md:py-10">
         <h2 className="text-center text-xl font-medium uppercase tracking-widest ">
           About Me
         </h2>
@@ -167,7 +171,7 @@ function App() {
       </section>
 
       {/* Portfolio */}
-      <section className="bg-yellow p-10">
+      <section className="bg-yellow px-3 py-5 md:px-0 md:py-10">
         <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-black">
           Projects
         </h2>
@@ -206,7 +210,7 @@ function App() {
       </section>
 
       {/*Skills */}
-      <section className="bg-[#1f1f1f] p-10">
+      <section className="bg-[#1f1f1f] px-3 py-5 pb-20 md:px-0">
         <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-white">
           Skills
         </h2>
@@ -228,6 +232,64 @@ function App() {
           ))}
         </ul>
       </section>
+
+      {/* Experience */}
+      <section className="bg-yellow px-3 py-10 pb-20 md:px-0">
+        <h2 className="py-10 text-center text-xl font-medium uppercase tracking-widest text-white">
+          Experience
+        </h2>
+
+        <VerticalTimeline>
+          <VerticalTimelineElement
+            iconStyle={{
+              background: "#AE944F",
+              color: "#fff",
+              textAlign: "center",
+            }}
+            icon={<Icon icon="eos-icons:hourglass" />}
+          />
+          <VerticalTimelineElement
+            date={"2020 - 2021"}
+            iconStyle={{
+              background: "#AE944F",
+              color: "#fff",
+              textAlign: "center",
+            }}
+            icon={<Icon icon="mdi:react" />}
+          >
+            <span className="rounded-xl bg-yellow px-[5px] py-[2px] text-sm">
+              React
+            </span>
+
+            <h3 className="text-lg font-bold">work title</h3>
+            <h4 className="text-md font-bold">company</h4>
+            <div className="mt-2 flex gap-2">
+              <span className="rounded-xl bg-[#f9f5e9] px-[5px] py-[2px] text-sm">
+                React
+              </span>
+              <span className="rounded-xl bg-[#f9f5e9] px-[5px] py-[2px] text-sm">
+                React
+              </span>
+              <span className="rounded-xl bg-[#f9f5e9] px-[5px] py-[2px] text-sm">
+                React
+              </span>
+            </div>
+          </VerticalTimelineElement>
+        </VerticalTimeline>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#1f1f1f] py-5 pt-10  text-center text-white">
+        <div className="flex justify-center gap-5">
+          <a href="#!">
+            <Icon icon="mdi:github" width="22px" />
+          </a>
+          <a href="#!">
+            <Icon icon="mdi:instagram" width="22px" />
+          </a>
+        </div>
+        <p className="py-2 text-xs">Copyright &copy; Davina Griss</p>
+      </footer>
     </main>
   );
 }
