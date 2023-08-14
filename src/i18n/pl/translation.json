@@ -37,8 +37,8 @@
         "startDate": "2020",
         "description": "Najbardziej rozbudowana aplikacja z jaką miałem okazję pracować. Nauczyłem się wielu technologii, a mój kod został sprawdzony przez świetnego kuratora. Aplikacja obsługuje wszystkie procesy adopcyjne oraz umożliwia przechowywanie wszelkich dowodów adopcji zwierząt ze schroniska.",
         "images": [
-          "/images/portfolio/animal-shelter/p1.jpg",
-          "/images/portfolio/animal-shelter/p2.jpg"
+          "images/portfolio/animal-shelter/p1.jpg",
+          "images/portfolio/animal-shelter/p2.jpg"
         ],
         "url": "https://github.com",
         "technologies": [
@@ -61,8 +61,8 @@
         "startDate": "2018",
         "description": "Projekt osobisty dla przedmiotu studiów. Byłem odpowiedzialny za testowanie aplikacji fotograficznej optymalizującej zdjęcia za pomocą popularnych algorytmów używanych przez edytory graficzne, takie jak Pixlr czy Adobe Photoshop. Zasłużyłem na ocenę A :)",
         "images": [
-          "/images/portfolio/photography/p1.jpg",
-          "/images/portfolio/photography/p2.jpg"
+          "images/portfolio/photography/p1.jpg",
+          "images/portfolio/photography/p2.jpg"
         ],
         "url": "https://github.com",
         "technologies": [
@@ -81,8 +81,8 @@
         "startDate": "2015",
         "description": "Jedna z pierwszych aplikacji, nad którymi pracowałem na moim stażu. Musiałem opracować implementację front-end dla aplikacji, która pokazuje modele 3D znanych budynków. Był to również mój pierwszy projekt w frameworku Angular. Dużo się nauczyłem!",
         "images": [
-          "/images/portfolio/adventure/p1.jpg",
-          "/images/portfolio/adventure/p2.jpg"
+          "images/portfolio/adventure/p1.jpg",
+          "images/portfolio/adventure/p2.jpg"
         ],
         "url": "https://github.com",
         "technologies": [

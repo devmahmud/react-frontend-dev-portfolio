@@ -14,7 +14,7 @@ const AboutMe = () => {
         <div className="text-center md:w-1/3">
           <div className="mb-[30px] mt-[55px] inline-block p-4 pb-10 shadow-card ">
             <img
-              src={`/images/${t("about_me.image")}`}
+              src={`images/${t("about_me.image")}`}
               alt="Profile"
               height="250px"
               className="w-[200px]"
