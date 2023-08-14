@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import Switch from "react-switch";
+import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 import { Icon } from "@iconify/react";
 import { TypeAnimation } from "react-type-animation";
 import { ThemeContext, ThemeContextInterface } from "@/contexts";
@@ -8,6 +10,8 @@ const Header = () => {
   const { darkTheme, toggleTheme } = useContext(
     ThemeContext,
   ) as ThemeContextInterface;
+
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -25,20 +29,13 @@ const Header = () => {
           </div>
 
           <h1 className="text-4xl font-bold text-gray-dark dark:text-white">
-            Davina Griss
+            {t("basic_info.name")}
           </h1>
 
           <TypeAnimation
-            sequence={[
-              "FRONT-END DEVELOPER",
-              1000,
-              "MOBILE DEVELOPER",
-              1000,
-              "SENIOR DATA ENGINEER",
-              1000,
-              "DEV TEAM LEAD",
-              1000,
-            ]}
+            sequence={t("basic_info.titles", { returnObjects: true }).flatMap(
+              (title: string) => [title, 1000],
+            )}
             wrapper="span"
             speed={50}
             className="text-regular text-2xl text-gray-dark dark:text-white"
@@ -71,12 +68,20 @@ const Header = () => {
 
       <div className="flex justify-center gap-5 bg-yellow pb-2.5 pt-20 dark:bg-[#494949]">
         <Icon
-          className="h-full cursor-pointer text-[50px] text-gray-dark brightness-50"
+          className={clsx(
+            "h-full cursor-pointer text-[50px] text-gray-dark ",
+            i18n.language === "en" && "brightness-50",
+          )}
           icon="twemoji-flag-for-flag-united-kingdom"
+          onClick={() => i18n.changeLanguage("en")}
         />
         <Icon
-          className="h-full cursor-pointer text-[50px] text-gray-dark"
+          className={clsx(
+            "h-full cursor-pointer text-[50px] text-gray-dark ",
+            i18n.language === "pl" && "brightness-50",
+          )}
           icon="twemoji-flag-for-flag-poland"
+          onClick={() => i18n.changeLanguage("pl")}
         />
       </div>
     </>
