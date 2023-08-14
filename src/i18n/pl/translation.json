@@ -1,0 +1,187 @@
+{
+  "basic_info": {
+    "name": "Davina Griss",
+    "titles": [
+      "Programista front-endu",
+      "Starszy inżynier danych",
+      "Lider zespołu deweloperskiego",
+      "Programista aplikacji mobilnych"
+    ],
+    "socials": [
+      {
+        "icon": "mdi:linkedin",
+        "url": "https://www.linkedin.com/in/devmahmud"
+      },
+      {
+        "icon": "mdi:github",
+        "url": "https://github.com/devmahmud"
+      },
+      {
+        "icon": "mdi:twitter",
+        "url": "https://twitter.com/expeliermers"
+      }
+    ]
+  },
+  "about_me": {
+    "title": "O mnie",
+    "greeting": "Cześć",
+    "content": "👋 Jestem Davina Griss. Fikcyjna osoba dla celów poglądowych :) Pracuję z najnowszymi frameworkami front-endowymi, takimi jak Angular, React i Vue. To, co teraz widzisz, to szablon portfolio od Dorota1997. Jeśli podoba Ci się ten szablon portfolio, pamiętaj o ⭐ repozytorium, aby było bardziej rozpoznawalne dla innych użytkowników. Dziękuję 💜",
+    "image": "myProfile.jpg",
+    "tech_stacks": ["devicon:angular", "devicon:react", "devicon:vuejs"]
+  },
+  "projects": {
+    "title": "projektowanie",
+    "projects": [
+      {
+        "title": "Schronisko dla zwierząt",
+        "startDate": "2020",
+        "description": "Najbardziej rozbudowana aplikacja z jaką miałem okazję pracować. Nauczyłem się wielu technologii, a mój kod został sprawdzony przez świetnego kuratora. Aplikacja obsługuje wszystkie procesy adopcyjne oraz umożliwia przechowywanie wszelkich dowodów adopcji zwierząt ze schroniska.",
+        "images": [
+          "/images/portfolio/animal-shelter/p1.jpg",
+          "/images/portfolio/animal-shelter/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "mdi:angular",
+            "name": "Angular"
+          },
+          {
+            "class": "teenyicons:typescript-outline",
+            "name": "TypeScript"
+          },
+          {
+            "class": "devicon:csharp",
+            "name": "C#"
+          }
+        ]
+      },
+      {
+        "title": "Fotografia",
+        "startDate": "2018",
+        "description": "Projekt osobisty dla przedmiotu studiów. Byłem odpowiedzialny za testowanie aplikacji fotograficznej optymalizującej zdjęcia za pomocą popularnych algorytmów używanych przez edytory graficzne, takie jak Pixlr czy Adobe Photoshop. Zasłużyłem na ocenę A :)",
+        "images": [
+          "/images/portfolio/photography/p1.jpg",
+          "/images/portfolio/photography/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "mdi:react",
+            "name": "React"
+          },
+          {
+            "class": "teenyicons:javascript-outline",
+            "name": "JavaScript"
+          }
+        ]
+      },
+      {
+        "title": "Przeglądarka obiektów 3D",
+        "startDate": "2015",
+        "description": "Jedna z pierwszych aplikacji, nad którymi pracowałem na moim stażu. Musiałem opracować implementację front-end dla aplikacji, która pokazuje modele 3D znanych budynków. Był to również mój pierwszy projekt w frameworku Angular. Dużo się nauczyłem!",
+        "images": [
+          "/images/portfolio/adventure/p1.jpg",
+          "/images/portfolio/adventure/p2.jpg"
+        ],
+        "url": "https://github.com",
+        "technologies": [
+          {
+            "class": "mdi:angular",
+            "name": "Angular"
+          },
+          {
+            "class": "teenyicons:typescript-outline",
+            "name": "TypeScript"
+          },
+          {
+            "class": "devicon:csharp",
+            "name": "C#"
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Umiejętności",
+    "icons": [
+      {
+        "name": "HTML 5",
+        "class": "ri:html5-fill",
+        "level": "95"
+      },
+      {
+        "name": "CSS 3",
+        "class": "teenyicons:css3-solid",
+        "level": "95"
+      },
+      {
+        "name": "Angular",
+        "class": "mdi:angular",
+        "level": "80"
+      },
+      {
+        "name": "TypeScript",
+        "class": "teenyicons:typescript-solid",
+        "level": "90"
+      },
+      {
+        "name": "JavaScript",
+        "class": "teenyicons:javascript-solid",
+        "level": "70"
+      },
+      {
+        "name": "Sass",
+        "class": "la:sass",
+        "level": "75"
+      },
+      {
+        "name": "Bootstrap",
+        "class": "ri:bootstrap-fill",
+        "level": "85"
+      },
+      {
+        "name": "C#",
+        "class": "devicon-plain:csharp",
+        "level": "65"
+      },
+      {
+        "name": "MySql",
+        "class": "fontisto:mysql",
+        "level": "60"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "experiences": [
+      {
+        "company": "DefOpenSource",
+        "title": "Programista front-endu",
+        "years": "10.2019 - obecnie",
+        "mainTech": "Angular 8/9/10",
+        "mainTechIcon": "mdi:angular",
+        "technologies": [
+          "REST API",
+          "RxJS",
+          "JavaScript",
+          "Bootstrap",
+          "MDBootstrap",
+          "EF Core",
+          ".NET Core",
+          "SignalR",
+          "Angular Material"
+        ]
+      },
+      {
+        "company": "Serros Solutions",
+        "title": "Stażysta",
+        "years": "01.2018 - 09.2019",
+        "mainTech": "React",
+        "mainTechIcon": "mdi:react",
+        "technologies": ["RxJS", "Django", "PHP", "JavaScript", "DHTMLX Gantt"]
+      }
+    ]
+  },
+  "copyright": "Prawo autorskie"
+}
