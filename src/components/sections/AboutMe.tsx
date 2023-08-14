@@ -1,40 +1,36 @@
 import { Icon } from "@iconify/react";
+import { useTranslation } from "react-i18next";
 
 const AboutMe = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-5 dark:bg-[#7f7f7f] md:py-10">
       <h2 className="text-center text-xl font-medium uppercase tracking-widest ">
-        About Me
+        {t("about_me.title")}
       </h2>
 
       <div className="flex flex-col items-center justify-center gap-10 px-10 pb-10 md:flex-row md:pb-0">
         <div className="text-center md:w-1/3">
           <div className="mb-[30px] mt-[55px] inline-block p-4 pb-10 shadow-card ">
             <img
-              src="/images/myProfile.jpg"
+              src={`/images/${t("about_me.image")}`}
               alt="Profile"
               height="250px"
               className="w-[200px]"
             />
             <div className="mt-3 flex justify-between">
-              <Icon
-                icon="devicon:angular"
-                style={{
-                  fontSize: 50,
-                }}
-              />
-              <Icon
-                icon="devicon:react"
-                style={{
-                  fontSize: 50,
-                }}
-              />
-              <Icon
-                icon="devicon:vuejs"
-                style={{
-                  fontSize: 50,
-                }}
-              />
+              {t("about_me.tech_stacks", { returnObjects: true })?.map(
+                (tech: string) => (
+                  <Icon
+                    k={tech}
+                    icon={tech}
+                    style={{
+                      fontSize: 50,
+                    }}
+                  />
+                ),
+              )}
             </div>
           </div>
         </div>
@@ -55,17 +51,12 @@ const AboutMe = () => {
             >
               <br />
               <span className="text-xl font-medium dark:text-white">
-                Hi :){" "}
+                {t("about_me.greeting")} :){" "}
               </span>
               <br />
               <br />
               <p className="text-sm font-medium dark:text-white">
-                👋 I'm Davina Griss. Fictional person for preview purposes :)
-                I'm working with newest front-end frameworks like Angular, React
-                and Vue. What you are seeing now is portfolio template from
-                Dorota1997. If you like this portfolio template, make sure to ⭐
-                the repository to make it more recognizable for other users.
-                Thank you 💜
+                {t("about_me.content")}
               </p>
             </div>
           </div>
