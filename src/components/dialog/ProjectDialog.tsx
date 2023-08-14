@@ -2,13 +2,15 @@ import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Icon } from "@iconify/react";
 import AwesomeSlider from "react-awesome-slider";
+import { ProjectType } from "@/i18n/config";
 
 interface Props {
   open: boolean;
   onClose: () => void;
+  project?: ProjectType;
 }
 
-const ProjectDialog = ({ open, onClose }: Props) => {
+const ProjectDialog = ({ open, onClose, project }: Props) => {
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={onClose}>
@@ -62,36 +64,23 @@ const ProjectDialog = ({ open, onClose }: Props) => {
                       }}
                     >
                       <AwesomeSlider className="w-full" organicArrows={false}>
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>4</div>
+                        {project?.images?.map((image) => (
+                          <div data-src={image} key={image} />
+                        ))}
                       </AwesomeSlider>
                     </div>
                   </div>
 
-                  <h2 className="mt-10 text-lg font-bold">Animal Shelter</h2>
-                  <p className="text-sm">
-                    The most expanded application I had opportunity to work
-                    with. I've learned many technologies and my code was
-                    reviewed by awesome curator. Application handles all
-                    adoption processess and allows to store all evidence on
-                    adopting animals from animal shelter.
-                  </p>
+                  <h2 className="mt-10 text-lg font-bold">{project?.title}</h2>
+                  <p className="text-sm">{project?.description}</p>
 
                   <div className="mt-3 flex justify-center gap-3">
-                    <div className=" text-black dark:text-white">
-                      <Icon icon="ri:html5-fill" fontSize="50px" />
-                      <p className="mt-1 text-center text-xs">React</p>
-                    </div>
-                    <div className=" text-black dark:text-white">
-                      <Icon icon="ri:html5-fill" fontSize="50px" />
-                      <p className="mt-1 text-center text-xs">React</p>
-                    </div>
-                    <div className=" text-black dark:text-white">
-                      <Icon icon="ri:html5-fill" fontSize="50px" />
-                      <p className="mt-1 text-center text-xs">React</p>
-                    </div>
+                    {project?.technologies?.map((tech) => (
+                      <div className=" text-black dark:text-white">
+                        <Icon icon={tech.class} fontSize="50px" />
+                        <p className="mt-1 text-center text-xs">{tech.name}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
