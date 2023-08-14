@@ -1,27 +1,74 @@
-# React + TypeScript + Vite
+<img width="80%" align="center" src="https://github.com/devmahmud/react-frontend-dev-portfolio/assets/19981097/d87a1b0f-badc-4530-9d03-2e0747814d9f" alt="portfolio template mockup" /> <br/>
+<img height="350px" align="right" src="https://github.com/devmahmud/react-frontend-dev-portfolio/assets/19981097/0a2fd986-cbd4-409a-9e62-4b783ccce5c7" alt="portfolio mobile demo gif"/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img align="left" src="https://github.com/leungwensen/svg-icon/blob/master/dist/svg/logos/react.svg" height="50" alt="react icon"/>
+<h2>React Tailwind Portfolio Template</h2>
 
-Currently, two official plugins are available:
+<pre>
+⭐ Easy to adapt and deploy portfolio project covering most important 
+sections(about, exp, skills, projects), inspired with solutions found 
+at GitHub. Check live preview(link below).
+</pre>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<strong>:crown: advantages</strong>
 
-## Expanding the ESLint configuration
+<img src="https://img.shields.io/badge/-multilingual-blue" alt="multilingual"/> &nbsp; <img src="https://img.shields.io/badge/-mobile friendly-blue" alt="mobile friendly"/> &nbsp; <img src="https://img.shields.io/badge/-light/dark mode-blue" alt="light/dark mode"/> &nbsp; <img src="https://img.shields.io/badge/-json fetched data-blue" alt="json fetched data"/> &nbsp; <img src="https://img.shields.io/badge/-minimalistic-blue" alt="minimalistic"/> &nbsp; <img src="https://img.shields.io/badge/-expandable-blue" alt="expandable"/>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<br/>
 
-- Configure the top-level `parserOptions` property like this:
+<h3>:eye_speech_bubble: Live demo</h3>
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+Check live demonstration <a href="https://dorota1997.github.io/react-frontend-dev-portfolio/"><strong>here</strong></a>
+
+<img width="100%" src="https://github.com/Dorota1997/react-frontend-dev-portfolio/blob/images/images/react_portfolio_about.png" alt="react frontend dev portfolio preview"/>
+
+<h3>:books: Getting started</h3>
+
+1. Clone or fork project.
+2. Install required dependencies with `yarn install`.
+3. Remove `homepage` entirely from `package.json` or set it to single dot. 
+
+```json
+// package.json
+{
+  "name": "react-frontend-dev-portfolio",
+  "homepage": "https://devmahmud.github.io/react-frontend-dev-portfolio/",   <-- remove/edit this
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+  ...
+}
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. `yarn dev` project and customize it.
+5. Deploy on github-pages using `yarn deploy` command.
+
+<pre>
+⚠️ Note that:
+- if you want to have portfolio on different repository than `{username}.github.io`, 
+set `homepage` in `package.json` to `https://{username}.github.io/{repository-name}/` 
+before deploying portfolio.
+- You also need to change the `base` inside `vite.config.ts`
+- if you want to run it locally with <strong>npm run start</strong>, make sure that you have edited 
+homepage property or json data won't load.
+</pre>
+
+<h3>:star: Inspirations</h3>
+
+<a href="https://github.com/tailwindlabs/tailwindcss">Tailwindcss</a> <br/>
+<a href="https://github.com/stephane-monnot/react-vertical-timeline">React Vertical Timeline</a> <br/>
+<a href="https://github.com/rcaferati/react-awesome-slider">React Awesome Slider</a> <br/>
+<a href="https://github.com/markusenglund/react-switch">React Switch</a> <br/>
+<a href="https://github.com/maxeth/react-type-animation">React Type Animation</a> <br/>
+<a href="https://iconify.design/icon-sets/?query=angular">Iconify Design</a> <br/>
+
+<h3>:gear: Contribution</h3>
+
+If you have any suggestions on what to improve in <em>react-frontend-dev-portfolio</em> and would like to share them, feel free to leave an issue or fork project to implement your own ideas :slightly_smiling_face:
+
+<h3>:gear: Credits(Source Code)</h3>
+This project is complete rewrite of [Dorota1997/react-frontend-dev-portfolio](https://github.com/Dorota1997/react-frontend-dev-portfolio)
+
+<h3>:camera: Credits(images)</h3>
+
+<a href="https://pixabay.com/photos/people-woman-girl-clothing-eye-2563491/">p1</a>, <a href="https://pixabay.com/photos/dog-puppy-sharpei-petit-animal-1865712/">p2</a>, <a href="https://pixabay.com/photos/night-camera-photographer-photo-1927265/">p3</a>, <a href="https://pixabay.com/photos/road-forest-season-autumn-fall-1072823/">p4</a>, <a href="https://pixabay.com/photos/neuschwanstein-castle-bavaria-701732/">p5</a>, <a href="https://pixabay.com/photos/hohenschwangau-alps-alpsee-bavaria-532864/">p6</a>
