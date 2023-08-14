@@ -42,7 +42,7 @@ const Experience = () => {
             <h4 className="text-md font-bold">{exp.company}</h4>
             <div className="mt-2 flex flex-wrap gap-2">
               {exp.technologies.map((tech) => (
-                <Badge text={tech} />
+                <Badge key={tech} text={tech} />
               ))}
             </div>
           </VerticalTimelineElement>

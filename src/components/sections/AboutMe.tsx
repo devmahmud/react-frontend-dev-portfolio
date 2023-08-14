@@ -23,7 +23,7 @@ const AboutMe = () => {
               {t("about_me.tech_stacks", { returnObjects: true })?.map(
                 (tech: string) => (
                   <Icon
-                    k={tech}
+                    key={tech}
                     icon={tech}
                     style={{
                       fontSize: 50,
