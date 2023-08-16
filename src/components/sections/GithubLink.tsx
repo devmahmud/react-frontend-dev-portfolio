@@ -1,7 +1,7 @@
 const GithubLink = () => {
   return (
     <a
-      href="https://github.com/devmahmud"
+      href="https://github.com/devmahmud/react-frontend-dev-portfolio"
       className="cursor-pointer"
       target="_blank"
     >
